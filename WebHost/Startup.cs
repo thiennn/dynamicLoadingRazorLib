@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -67,8 +68,22 @@ namespace WebHost
                 o.AdditionalCompilationReferences.Add(MetadataReference.CreateFromFile(Assembly.Load(new AssemblyName("Plugin1")).Location));
             });
 
-            mvcBuilder.AddApplicationPart(Assembly.Load(new AssemblyName("Plugin1")));
-            mvcBuilder.AddApplicationPart(Assembly.Load(new AssemblyName("Plugin1.Views")));
+            var pluginAssembly = Assembly.Load(new AssemblyName("Plugin1"));
+            var partFactory = ApplicationPartFactory.GetApplicationPartFactory(pluginAssembly);
+            foreach (var part in partFactory.GetApplicationParts(pluginAssembly))
+            {
+                mvcBuilder.PartManager.ApplicationParts.Add(part);
+            }
+
+            var relatedAssemblies = RelatedAssemblyAttribute.GetRelatedAssemblies(pluginAssembly, throwOnError: true);
+            foreach (var assembly in relatedAssemblies)
+            {
+                partFactory = ApplicationPartFactory.GetApplicationPartFactory(assembly);
+                foreach (var part in partFactory.GetApplicationParts(assembly))
+                {
+                    mvcBuilder.PartManager.ApplicationParts.Add(part);
+                }
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
