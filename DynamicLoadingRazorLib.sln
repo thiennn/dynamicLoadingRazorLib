@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicLoadingRazorLib", "DynamicLoadingRazorLib\DynamicLoadingRazorLib.csproj", "{8D8D5A0A-A770-4477-B325-A8926A51EFE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin1", "Plugin1\Plugin1.csproj", "{E0E20C41-8AD1-48D4-98A1-19CD9327988A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8D8D5A0A-A770-4477-B325-A8926A51EFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D8D5A0A-A770-4477-B325-A8926A51EFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D8D5A0A-A770-4477-B325-A8926A51EFE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0E20C41-8AD1-48D4-98A1-19CD9327988A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0E20C41-8AD1-48D4-98A1-19CD9327988A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0E20C41-8AD1-48D4-98A1-19CD9327988A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0E20C41-8AD1-48D4-98A1-19CD9327988A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
