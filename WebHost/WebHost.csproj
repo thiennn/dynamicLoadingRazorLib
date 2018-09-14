@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Areas\**\*.*" />
     <Content Remove="Areas\**\*.*" />
+    <None Include="Areas\**" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
