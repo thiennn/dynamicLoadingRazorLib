@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using DynamicLoadingRazorLib.Models;
+using WebHost.Models;
 
-namespace DynamicLoadingRazorLib.Controllers
+namespace WebHost.Controllers
 {
     public class HomeController : Controller
     {

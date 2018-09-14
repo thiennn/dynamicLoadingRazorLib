@@ -1,6 +1,6 @@
 using System;
 
-namespace DynamicLoadingRazorLib.Models
+namespace WebHost.Models
 {
     public class ErrorViewModel
     {

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace DynamicLoadingRazorLib
+namespace WebHost
 {
     public class Program
     {
@@ -18,7 +18,7 @@ namespace DynamicLoadingRazorLib
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+            Microsoft.AspNetCore.WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
     }
 }

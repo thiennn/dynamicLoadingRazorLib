@@ -14,7 +14,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DynamicLoadingRazorLib
+namespace WebHost
 {
     public class Startup
     {
