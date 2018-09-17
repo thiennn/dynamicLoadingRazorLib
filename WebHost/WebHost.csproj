@@ -7,6 +7,8 @@
   <ItemGroup>
     <Content Remove="Areas\**\*.*" />
     <None Include="Areas\**" />
+    <Content Remove="Themes\**\*.*" />
+    <None Include="Themes\**" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
