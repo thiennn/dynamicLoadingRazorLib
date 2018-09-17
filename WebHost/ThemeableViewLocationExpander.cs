@@ -14,7 +14,7 @@ namespace WebHost
                     "/Themes/TestTheme/Areas/{2}/Views/{1}/{0}.cshtml",
                     "/Themes/TestTheme/Areas/{2}/Views/Shared/{0}.cshtml",
                     "/Themes/TestTheme/Views/{1}/{0}.cshtml",
-                    "/Theme/TestTheme/Views/Shared/{0}.cshtml"
+                    "/Themes/TestTheme/Views/Shared/{0}.cshtml"
                 };
 
             viewLocations = themeableViewLocations.Concat(viewLocations);
